@@ -23,7 +23,7 @@ body {
 	width: 15%;
 	height: 34px;
 	text-align: center;
-	font-size: 1.2em;
+	font-size: 1em;
 	padding: 10px;
 	display: inline;
 	float: right;
@@ -32,9 +32,7 @@ body {
 	transition: 0.3s;
 }
 #navbar li:hover {
-	padding-top: 20px;
-	padding-bottom: 0px;
-	background-color: rgb(180,180,180);
+	background-color: rgb(170,170,170);
 }
 #navbar a {
 	text-decoration: none;
@@ -45,8 +43,8 @@ body {
 	margin: 0;
 }
 #navbar img {
+	max-width: 50%; 
 	padding: 3px;
-	background-color: rgb(220,220,220);
 	float: left;
 }
 
@@ -120,14 +118,14 @@ body {
 #sorobanAbacusValue, #binaryAbacusValue {
 	margin: 20px 10% 0 10%;
 	text-align: center;
-	font-size: 2.5em;
+	font-size: 1.8em;
     padding-bottom: 30px;
     border-bottom: 1px solid rgb(100,100,100);
 }
 .sorobanDigitVal, .binaryDigitVal {
 	text-align: center;
-	margin: 0;
-	padding: 10px;
+	padding: 10px 0;
+	margin: auto;
 	font-size: 2em;
 	color: white;
 }
@@ -166,4 +164,8 @@ body {
 #footer a {
 	color: springgreen;
 	background-color: rgb(50,50,50);
+}
+#footer span {
+	width: 80%;
+	margin: auto;
 }

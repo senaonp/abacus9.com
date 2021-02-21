@@ -3,15 +3,20 @@
 	<head>
 		<title>abacus9 - an online abacus applet</title>
 		<link rel="stylesheet" href="abacus.css" />
+        <link rel="icon" href="assets/img/abacus_favicon.png" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta property="og:title" content=">abacus9 - an online abacus applet" />
+		<meta property="og:description" content="an online abacus applet resource | soroban abacus | binary abacus | learn counting with abacuses" />
+		<meta property="og:image" content = "https://abacus9.com/assets/img/soroban_preview.JPG" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	
 	<body>
 		<div id="navbar">
 			<img src="assets/img/logo.png" />
-			<ul><li onclick="confirmEvent(navi, 'this tab will redirect to the abacus9 GitHub repository; continue to (https://github.com/Tofuni/abacus9)?', 'https://github.com/Tofuni/abacus9')">Developer Log</li><li onclick="toggleBanner()">About</li></ul>
+			<ul><li onclick="confirmEvent(navi, 'this tab will redirect to the abacus9 GitHub repository; continue to (https://github.com/Tofuni/abacus9)?', 'https://github.com/Tofuni/abacus9')">GitHub Repo</li><li onclick="toggleBanner()">About</li></ul>
 			<div id="banner" style="display:none">
-				<p><span class="springgreen">abacus9 is a development side project i'm currently working on during free time; looking to build additional features which are outlined on the bottom of the page and also welcoming feedback on the applet too (･‿･✿)<br><br>please feel free to send feedback to <a href="mailto:tofuni.dev@gmail.com">(tofuni.dev@gmail.com)</a> and let me know if the applet has been useful or if there's any possible improvements that could be made, thanks!</p>
+				<p><span class="springgreen">abacus9 is a development side project i'm currently working on during free time; looking to build additional features over time and also welcoming feedback on the applet too (･‿･✿)<br><br>please feel free to send feedback to <a href="mailto:tofuni.dev@gmail.com">(tofuni.dev@gmail.com)</a> and let me know if the applet has been useful or if there's any possible improvements that could be made, thanks!<br><br></p>
 				<button onclick="hideElem(elemSelector('#banner'))">close</button>
 			</div>
 		</div>
@@ -32,7 +37,8 @@
 		
 		<div id="footer">
 			<span>developed by Tofuni</span>
-			<br><br><span>abacus9 source code is available on GitHub (･‿･✿) - <a href="https://github.com/Tofuni/abacus9">(https://github.com/Tofuni/abacus9)</a></span>
+			<br><br><span>abacus9 source code is available on <a target="_blank" href="https://github.com/Tofuni/abacus9">GitHub</a> (･‿･✿)</span>
+			<br><br><span>email: <a href="mailto:tofuni.dev@gmail.com">(tofuni.dev@gmail.com)</a></span>
 		</div>
 	</body>
 	<script src="helpers.js"></script>

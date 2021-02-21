@@ -44,6 +44,7 @@ let displaySorobanValue = function() {
 		f = 1;
 		sorobanValDisplayNum += v;
 	});
+    if (sorobanValDisplayNum == "") { sorobanValDisplayNum = "0"; }
 	elemSelector("#sorobanAbacusValue").innerHTML = sorobanValDisplay + sorobanValDisplayNum;
 }
 
