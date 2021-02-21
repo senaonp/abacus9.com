@@ -3,11 +3,12 @@
 	<head>
 		<title>abacus9 - an online abacus applet</title>
 		<link rel="stylesheet" href="abacus.css" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	</head>
 	
 	<body>
 		<div id="navbar">
-			<img src="assets/img/logo.PNG" />
+			<img src="assets/img/logo.png" />
 			<ul><li onclick="confirmEvent(navi, 'this tab will redirect to the abacus9 GitHub repository; continue to (https://github.com/Tofuni/abacus9)?', 'https://github.com/Tofuni/abacus9')">Developer Log</li><li onclick="toggleBanner()">About</li></ul>
 			<div id="banner" style="display:none">
 				<p><span class="springgreen">abacus9 is a development side project i'm currently working on during free time; looking to build additional features which are outlined on the bottom of the page and also welcoming feedback on the applet too (･‿･✿)<br><br>please feel free to send feedback to <a href="mailto:tofuni.dev@gmail.com">(tofuni.dev@gmail.com)</a> and let me know if the applet has been useful or if there's any possible improvements that could be made, thanks!</p>
@@ -18,9 +19,15 @@
 		<div id="content">
 			<p class="sorobanText" id="sorobanTitle">Soroban abacus</p>
 			<p class="sorobanText">you can use the up/down (&#9661/&#9651) buttons on the abacus rows to modify the abacus values</p>
-			<p class="sorobanText" id="sorobanDescription">background - each row in the abacus represents a digit; the top bead represents the value of 5 while each of the bottom beads represent a value of 1.<br>a number is counted when beads are positioned towards the middle beam <span class="eventText" onclick="hideElem(elemSelector('#sorobanDescription'))">(hide description)</span></p>
+			<p class="sorobanText" id="sorobanDescription">background - each row in the abacus represents a digit; the top bead represents the value of 5 while each of the bottom beads represent a value of 1. a number is counted when beads are positioned towards the middle beam <span class="eventText" onclick="hideElem(elemSelector('#sorobanDescription'))">(hide description)</span></p>
 			<div id="sorobanAbacus"></div>
 			<div id="sorobanAbacusValue"></div>
+			
+			<p class="binaryText" id="binaryTitle">Binary abacus</p>
+			<p class="binaryText">you can use the up/down (&#9661/&#9651) buttons on the abacus rows to modify the abacus values</p>
+			<p class="binaryText" id="binaryDescription">background - each row in the abacus represents a binary digit; a bead on the top represents the value of 1 while a bead on the bottom represents a value of 0 <span class="eventText" onclick="hideElem(elemSelector('#binaryDescription'))">(hide description)</span></p>
+			<div id="binaryAbacus"></div>
+			<div id="binaryAbacusValue"></div>
 		</div>
 		
 		<div id="footer">
@@ -29,5 +36,6 @@
 		</div>
 	</body>
 	<script src="helpers.js"></script>
-	<script src="abacus.js"></script>
+	<script src="soroban.js"></script>
+    <script src="binary.js"></script>
 </html>

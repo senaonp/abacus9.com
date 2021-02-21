@@ -98,46 +98,49 @@ body {
 }
 
 /* --------------------------------- */
-/* ------------ soroban ------------ */
+/* --------- abacus shared --------- */
 /* --------------------------------- */
 
-#sorobanAbacus {
+#sorobanAbacus, #binaryAbacus {
     width: 80%;
     margin: auto;
     background-color: rgb(100,100,100);
     border-radius: 10px;
     padding: 1%;
 }
-#sorobanTitle {
+#sorobanTitle, #binaryTitle {
 	margin: 30px 0 10px 10%;
 	font-size: 2em;
 	padding: 0;
 }
-.sorobanText, #sorobanAbacusValue {
+.sorobanText, #sorobanAbacusValue, #sorobanTitle, .binaryText, #binaryAbacusValue, #binaryTitle {
 	margin-left: 10%;
+	width: 80%;
 }
-#sorobanAbacusValue {
-	margin: 20px 0 0 0;
+#sorobanAbacusValue, #binaryAbacusValue {
+	margin: 20px 10% 0 10%;
 	text-align: center;
 	font-size: 2.5em;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgb(100,100,100);
 }
-.sorobanDigitVal {
+.sorobanDigitVal, .binaryDigitVal {
 	text-align: center;
 	margin: 0;
 	padding: 10px;
 	font-size: 2em;
 	color: white;
 }
-.sorobanRow {
+.sorobanRow, .binaryRow {
     width: 8%;
     display: inline-block;
     margin-left: 1%;
     border: 1px solid rgb(50,50,50);
 }
-.sorobanTop, .sorobanBottom {
+.sorobanTop, .sorobanBottom, .binaryRowDisp {
 	width: 100%;
 }
-.sorobanRow button {
+.sorobanRow button, .binaryRow button {
     width: 100%;
     padding: 2px;
     margin: 0;

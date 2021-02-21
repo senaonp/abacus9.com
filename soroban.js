@@ -1,4 +1,3 @@
-// first develop soroban, then suanpan, and finally binary abacus
 const digits = 9;
 
 let sorobanVals = [0,0,0,0,0,0,0,0,0];
@@ -10,28 +9,8 @@ let sorobanVal = 0;
 let sorobanValState = 0;
 let sorobanValDisplay = "";
 let soroban = "";
-for (let digit=0; digit<digits; digit+=1) {
-    let sorobanRow = `
-    <div class="sorobanRow" id="sb_`+digit.toString()+`">
-        <button onclick="subt('sbt_`+digit.toString()+`', 5, 't')">&#9651</button>
-        <img draggable="false" class="sorobanTop" id="sbt_`+digit.toString()+`" />
-        <button onclick="add('sbt_`+digit.toString()+`', 5, 't')">&#9661</button>
-        
-        <div class="vPadding"></div>
-        
-        <button onclick="add('sbb_`+digit.toString()+`', 1, 'b')">&#9651</button>
-        <img draggable="false" class="sorobanBottom" id="sbb_`+digit.toString()+`" />
-        <button onclick="subt('sbb_`+digit.toString()+`', 1, 'b')">&#9661</button>
-		<p class="sorobanDigitVal" id="sorobanDigitVal_`+digit.toString()+`">`+sorobanVals[digit.toString()]+`</p>
-    </div>`
-    soroban += sorobanRow;
-    elemSelector("#sorobanAbacus").innerHTML += sorobanRow;
-	elemSelector("#sbt_"+digit.toString()).src = "assets/img/soroban/sbv_00.jpg";
-	elemSelector("#sbb_"+digit.toString()).src = "assets/img/soroban/sbv_0.jpg";
-	elemSelector("#sorobanAbacusValue").innerHTML = "soroban abacus value: 0";
-}
 
-let add = function(id, val, p) {
+let sorobanAdd = function(id, val, p) {
 	digit = id.split('_')[1];
 	sorobanVal = sorobanVals[digit] + val;
 	sorobanValState = sorobanValStates[digit][p] + val;
@@ -39,12 +18,11 @@ let add = function(id, val, p) {
 	sorobanValStates[digit][p] += val;
 	sorobanVals[digit] += val;
 	elemSelector("#"+id).src = "assets/img/soroban/sbv_"+sorobanValState+".jpg";
-	displaySorobanValue();
 	elemSelector("#sorobanDigitVal_"+digit).innerText = sorobanVals[digit];
-	console.log(sorobanVals);
+	displaySorobanValue();
 }
 
-let subt = function(id, val, p) {
+let sorobanSubt = function(id, val, p) {
 	digit = id.split('_')[1];
 	sorobanVal = sorobanVals[digit]-val;
 	sorobanValState = sorobanValStates[digit][p]-val;
@@ -55,7 +33,6 @@ let subt = function(id, val, p) {
 	else { elemSelector("#"+id).src = "assets/img/soroban/sbv_"+sorobanValState+".jpg"; }
 	elemSelector("#sorobanDigitVal_"+digit).innerText = sorobanVals[digit];
 	displaySorobanValue();
-	console.log(sorobanVals);
 }
 
 let displaySorobanValue = function() {
@@ -68,4 +45,25 @@ let displaySorobanValue = function() {
 		sorobanValDisplayNum += v;
 	});
 	elemSelector("#sorobanAbacusValue").innerHTML = sorobanValDisplay + sorobanValDisplayNum;
+}
+
+for (let digit=0; digit<digits; digit+=1) {
+    let sorobanRow = `
+    <div class="sorobanRow" id="sb_`+digit.toString()+`">
+        <button onclick="sorobanSubt('sbt_`+digit.toString()+`', 5, 't')">&#9651</button>
+        <img draggable="false" class="sorobanTop" id="sbt_`+digit.toString()+`" />
+        <button onclick="sorobanAdd('sbt_`+digit.toString()+`', 5, 't')">&#9661</button>
+        
+        <div class="vPadding"></div>
+        
+        <button onclick="sorobanAdd('sbb_`+digit.toString()+`', 1, 'b')">&#9651</button>
+        <img draggable="false" class="sorobanBottom" id="sbb_`+digit.toString()+`" />
+        <button onclick="sorobanSubt('sbb_`+digit.toString()+`', 1, 'b')">&#9661</button>
+		<p class="sorobanDigitVal" id="sorobanDigitVal_`+digit.toString()+`">`+sorobanVals[digit.toString()]+`</p>
+    </div>`
+    soroban += sorobanRow;
+    elemSelector("#sorobanAbacus").innerHTML += sorobanRow;
+	elemSelector("#sbt_"+digit.toString()).src = "assets/img/soroban/sbv_00.jpg";
+	elemSelector("#sbb_"+digit.toString()).src = "assets/img/soroban/sbv_0.jpg";
+	elemSelector("#sorobanAbacusValue").innerHTML = "soroban abacus value: 0";
 }
