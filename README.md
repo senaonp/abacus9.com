@@ -2,8 +2,8 @@
 
 -----
 
-Desktop preview:
+## Desktop preview:
 <img src="./assets/img/soroban_preview.JPG" width="100%" height="auto">
 
-Mobile preview:
-<img src="./assets/img/soroban_preview_mobile.JPG" width="100%" height="auto">
+## Mobile preview:
+<img src="./assets/img/soroban_preview_mobile.JPG" height="auto">
