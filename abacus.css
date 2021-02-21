@@ -23,6 +23,7 @@ body {
 	width: 15%;
 	height: 34px;
 	text-align: center;
+	font-size: 1.2em;
 	padding: 10px;
 	display: inline;
 	float: right;
@@ -31,12 +32,12 @@ body {
 	transition: 0.3s;
 }
 #navbar li:hover {
-	padding-top: 15px;
+	padding-top: 20px;
+	padding-bottom: 0px;
 	background-color: rgb(180,180,180);
 }
 #navbar a {
 	text-decoration: none;
-	font-size: 1.2em;
 	color: rgb(50,50,50);
 }
 #navbar ul {
@@ -47,6 +48,34 @@ body {
 	padding: 3px;
 	background-color: rgb(220,220,220);
 	float: left;
+}
+
+/* --------------------------------- */
+/* ------------ banner ------------ */
+/* --------------------------------- */
+
+#banner {
+	background-color: rgba(10,10,10,0.9);
+	display: inline-block;
+	position: relative;
+	margin-bottom: 30px;
+	border-top: 4px solid rgba(100,100,100,0.5);
+	width: 100%;
+}
+#banner p {
+	margin-left: 70px;
+	color: white;
+}
+#banner button {
+	position: absolute;
+	bottom: 7px;
+	right: 7px;
+	background-color: rgb(200,200,200);
+	padding: 5px 15px;
+	cursor: pointer;
+}
+#banner a {
+	color: springgreen;
 }
 
 /* --------------------------------- */
@@ -62,6 +91,15 @@ body {
     height: 15px;
     background-color: rgb(20,20,20);
 }
+.eventText {
+	text-decoration: underline;
+	color: rgb(150,150,150);
+	cursor: pointer;
+}
+
+/* --------------------------------- */
+/* ------------ soroban ------------ */
+/* --------------------------------- */
 
 #sorobanAbacus {
     width: 80%;
@@ -71,16 +109,18 @@ body {
     padding: 1%;
 }
 #sorobanTitle {
-	margin-left: 10%;
 	margin: 30px 0 10px 10%;
 	font-size: 2em;
 	padding: 0;
+}
+.sorobanText {
+	margin-left: 10%;
 }
 .sorobanRow {
     width: 9%;
     display: inline-block;
     padding: 0;
-    margin: 0 5px;
+    margin-left: 1%;
     border: 1px solid rgb(50,50,50);
 }
 .sorobanTop, .sorobanBottom {
@@ -90,9 +130,9 @@ body {
     width: 100%;
     padding: 2px;
     margin: 0;
-    background-color: rgb(70,70,70);
+    background-color: rgb(50,50,50);
     color: rgb(200,200,200);
-    border: none;
+	border: 1px solid rgb(220,220,220,0.7);
     cursor: pointer;
 }
 
@@ -101,9 +141,8 @@ body {
 /* --------------------------------- */
 
 #footer {
-	postion: absolute;
 	bottom: 0;
-	margin: 100px 0 0 0;
+	margin: 50px 0 0 0;
 	padding: 20px 0 0 0;
 	height: 150px;
 	text-align: center;

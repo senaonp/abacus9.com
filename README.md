@@ -1,6 +1,6 @@
-# Abacus9 | An Online Abacus Applet
+# Abacus9 | an online abacus applet
 ## Project currently under development
-## Once the project is completed and the applet is hosted on AWS will update the repo URL with the domain
+Once the project is completed and the applet is hosted on AWS I will update the repo URL with the domain
 
 -----
 
