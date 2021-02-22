@@ -7,8 +7,12 @@ let sorobanValStates = [{'t':0,'b':0,'v':0},{'t':0,'b':0},{'t':0,'b':0},
 let digit = 0;
 let sorobanVal = 0;
 let sorobanValState = 0;
+let sorobanValDisplayNum = "";
 let sorobanValDisplay = "";
 let soroban = "";
+
+let checkSorobanMatch = 0;
+let sorobanMatches = 0;
 
 let sorobanAdd = function(id, val, p) {
 	digit = id.split('_')[1];
@@ -37,7 +41,7 @@ let sorobanSubt = function(id, val, p) {
 
 let displaySorobanValue = function() {
 	sorobanValDisplay = "soroban abacus value: ";
-	let sorobanValDisplayNum = "";
+	sorobanValDisplayNum = "";
 	let f = 0;
 	sorobanVals.forEach(function(v) { 
 		if (f == 0 && v == 0) { return; } 
@@ -67,4 +71,51 @@ for (let digit=0; digit<digits; digit+=1) {
 	elemSelector("#sbt_"+digit.toString()).src = "assets/img/soroban/sbv_00.jpg";
 	elemSelector("#sbb_"+digit.toString()).src = "assets/img/soroban/sbv_0.jpg";
 	elemSelector("#sorobanAbacusValue").innerHTML = "soroban abacus value: 0";
+}
+
+// match numbers practice
+
+let initializeSoroban = function() {
+	sorobanVals = [0,0,0,0,0,0,0,0,0];
+	sorobanValStates = [{'t':0,'b':0,'v':0},{'t':0,'b':0},{'t':0,'b':0}, {'t':0,'b':0},{'t':0,'b':0},{'t':0,'b':0}, {'t':0,'b':0},{'t':0,'b':0},{'t':0,'b':0}];
+	digit = 0;
+	sorobanVal = 0;
+	sorobanValState = 0;
+	sorobanValDisplay = "";
+	sorobanValDisplayNum = "";
+	soroban = "";
+	for (let digit=0; digit<digits; digit+=1) {
+		elemSelector("#sbt_"+digit.toString()).src = "assets/img/soroban/sbv_00.jpg";
+		elemSelector("#sbb_"+digit.toString()).src = "assets/img/soroban/sbv_0.jpg";
+		elemSelector("#sorobanAbacusValue").innerHTML = "soroban abacus value: 0";
+		elemSelector("#sorobanDigitVal_"+digit.toString()).innerHTML = "0";
+	}
+}
+
+let sorobanMatch = function() {
+	initializeSoroban();
+	elemSelector("#sorobanMatchDescription").style.display = "none";
+	elemSelector("#sorobanMatchAgain").style.display = "none";
+	elemSelector("#sorobanMatchActive").style.display = "block";
+	elemSelector("#sorobanMatchNumber").style.display = "block";
+	elemSelector("#sorobanMatchSuccess").innerHTML = "";
+	let rn = getRandomNum(1,10**getRandomNum(0,10)); // distribution numbers among powers of 10, not just values between 1 and 1000000000 (this creates bias towards nine-digit numbers)
+	checkSorobanMatch = setInterval(function() {
+		if (sorobanValDisplayNum == rn.toString()) {
+			elemSelector("#sorobanMatchNumber").style.display = "none";
+			elemSelector("#sorobanMatchAgain").style.display = "block";
+			sorobanMatches += 1;
+			elemSelector("#sorobanMatchSuccess").innerHTML = "nice!";
+			elemSelector("#sorobanMatchResult").innerHTML = "number of matches: " + sorobanMatches;
+			clearInterval(checkSorobanMatch);
+		}
+	}, 100)
+	elemSelector("#sorobanMatchNumber").innerHTML = "abacus practice - set the abacus to " + rn.toString();
+};
+
+let sorobanMatchExit = function() {
+	clearInterval(checkSorobanMatch);
+	initializeSoroban();
+	elemSelector("#sorobanMatchDescription").style.display = "block";
+	elemSelector("#sorobanMatchActive").style.display = "none";
 }

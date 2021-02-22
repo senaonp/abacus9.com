@@ -28,3 +28,17 @@ var toggleBanner = function() {
 		elemSelector('#banner').style.display='inline-block'
 	}
 }
+
+// get a random number within a range of integers
+var getRandomNum = function(min, max) {
+    return Math.floor(Math.random()*(max-min)+min);
+}
+
+// toggle visibility of element
+var toggleElem = function(elem) {
+	if (elem.style.display == "none") {
+		elem.style.display = "block";
+		return;
+	}
+	elem.style.display = "none";
+}

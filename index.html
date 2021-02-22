@@ -22,17 +22,44 @@
 		</div>
 		
 		<div id="content">
-			<p class="sorobanText" id="sorobanTitle">Soroban abacus</p>
-			<p class="sorobanText">you can use the up/down (&#9661/&#9651) buttons on the abacus rows to modify the abacus values</p>
-			<p class="sorobanText" id="sorobanDescription">background - each row in the abacus represents a digit; the top bead represents the value of 5 while each of the bottom beads represent a value of 1. a number is counted when beads are positioned towards the middle beam <span class="eventText" onclick="hideElem(elemSelector('#sorobanDescription'))">(hide description)</span></p>
-			<div id="sorobanAbacus"></div>
-			<div id="sorobanAbacusValue"></div>
+			<div id="soroban">
+				<p class="sorobanText" id="sorobanTitle">Soroban abacus</p>
+				<p class="sorobanText">you can use the up/down (&#9661/&#9651) buttons on the abacus rows to modify the abacus values</p>
+				<p class="sorobanText" id="sorobanDescription">background - each row in the abacus represents a digit; the top bead represents the value of 5 while each of the bottom beads represent a value of 1. a number is counted when beads are positioned towards the middle beam <span class="eventText" onclick="hideElem(elemSelector('#sorobanDescription'))">(hide description)</span></p>
+				<div id="sorobanAbacus"></div>
+				<div id="sorobanAbacusValue"></div>
+				<div id="sorobanMatch">
+					<div id="sorobanMatchDescription">
+						<span>practice exercise - set the abacus to a randomized number </span>
+						<button onclick="sorobanMatch()">start practice</button>
+					</div>
+					<div id="sorobanMatchActive" style="display:none">
+						<p id="sorobanMatchNumber"></p>
+						<span id="sorobanMatchSuccess"></span><p id="sorobanMatchResult"></p><button id='sorobanMatchAgain' onclick='sorobanMatch()'>practice again</button>
+						<button onclick="sorobanMatchExit()">exit soroban abacus match practice</button>
+					</div>
+				</div>
+			</div>
+			<hr>
 			
-			<p class="binaryText" id="binaryTitle">Binary abacus</p>
-			<p class="binaryText">you can use the up/down (&#9661/&#9651) buttons on the abacus rows to modify the abacus values</p>
-			<p class="binaryText" id="binaryDescription">background - each row in the abacus represents a binary digit; a bead on the top represents the value of 1 while a bead on the bottom represents a value of 0 <span class="eventText" onclick="hideElem(elemSelector('#binaryDescription'))">(hide description)</span></p>
-			<div id="binaryAbacus"></div>
-			<div id="binaryAbacusValue"></div>
+			<div id="binary">
+				<p class="binaryText" id="binaryTitle">Binary abacus</p>
+				<p class="binaryText">you can use the up/down (&#9661/&#9651) buttons on the abacus rows to modify the abacus values</p>
+				<p class="binaryText" id="binaryDescription">background - each row in the abacus represents a binary digit; a bead on the top represents the value of 1 while a bead on the bottom represents a value of 0 <span class="eventText" onclick="hideElem(elemSelector('#binaryDescription'))">(hide description)</span></p>
+				<div id="binaryAbacus"></div>
+				<div id="binaryAbacusValue"></div>
+				<div id="binaryMatch">
+					<div id="binaryMatchDescription">
+						<span>practice exercise - set the abacus to a randomized number </span>
+						<button onclick="binaryMatch()">start practice</button>
+					</div>
+					<div id="binaryMatchActive" style="display:none">
+						<p id="binaryMatchNumber"></p>
+						<span id="binaryMatchSuccess"></span><p id="binaryMatchResult"></p><button id='binaryMatchAgain' onclick='binaryMatch()'>practice again</button>
+						<button onclick="binaryMatchExit()">exit binary abacus match practice</button>
+					</div>
+				</div>
+			</div>
 		</div>
 		
 		<div id="footer">
