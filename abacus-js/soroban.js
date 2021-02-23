@@ -42,10 +42,10 @@ let sorobanSubt = function(id, val, p) {
 let displaySorobanValue = function() {
 	sorobanValDisplay = "soroban abacus value: ";
 	sorobanValDisplayNum = "";
-	let f = 0;
+	let x = 0;
 	sorobanVals.forEach(function(v) { 
-		if (f == 0 && v == 0) { return; } 
-		f = 1;
+		if (x == 0 && v == 0) { return; } 
+		x = 1;
 		sorobanValDisplayNum += v;
 	});
     if (sorobanValDisplayNum == "") { sorobanValDisplayNum = "0"; }
