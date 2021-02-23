@@ -2,6 +2,9 @@
 
 -----
 
+## usage
+applet can be run in a web browser by checking out the repo and opening `index.html` in a web browser
+
 ## feature wishlist
 - (game) math/subtraction arithmetic exercises
 - (code) refactoring
