@@ -23,7 +23,7 @@
 		
 		<div id="content">
 			<div id="soroban">
-				<p class="sorobanText" id="sorobanTitle">Soroban abacus</p>
+				<p class="sorobanText" id="sorobanTitle">Soroban (そろばん)</p>
 				<p class="sorobanText">you can use the up/down (&#9661/&#9651) buttons on the abacus rows to modify the abacus values</p>
 				<p class="sorobanText" id="sorobanDescription">background - each row in the abacus represents a digit; the top bead represents the value of 5 while each of the bottom beads represent a value of 1. a number is counted when beads are positioned towards the middle beam <span class="eventText" onclick="hideElem(elemSelector('#sorobanDescription'))">(hide description)</span></p>
 				<div id="sorobanAbacus"></div>
@@ -37,6 +37,26 @@
 						<p id="sorobanMatchNumber"></p>
 						<span id="sorobanMatchSuccess"></span><p id="sorobanMatchResult"></p><button id='sorobanMatchAgain' onclick='sorobanMatch()'>practice again</button>
 						<button onclick="sorobanMatchExit()">exit soroban abacus match practice</button>
+					</div>
+				</div>
+			</div>
+			<hr>
+
+			<div id="suanpan">
+				<p class="suanpanText" id="suanpanTitle">Suanpan (算盘)</p>
+				<p class="suanpanText">you can use the up/down (&#9661/&#9651) buttons on the abacus rows to modify the abacus values</p>
+				<p class="suanpanText" id="suanpanDescription">background - each row in the abacus represents a digit; the top bead represents the value of 5 while each of the bottom beads represent a value of 1. a number is counted when beads are positioned towards the middle beam <span class="eventText" onclick="hideElem(elemSelector('#suanpanDescription'))">(hide description)</span></p>
+				<div id="suanpanAbacus"></div>
+				<div id="suanpanAbacusValue"></div>
+				<div id="suanpanMatch">
+					<div id="suanpanMatchDescription">
+						<span>practice exercise - set the abacus to a randomized number </span>
+						<button onclick="suanpanMatch()">start practice</button>
+					</div>
+					<div id="suanpanMatchActive" style="display:none">
+						<p id="suanpanMatchNumber"></p>
+						<span id="suanpanMatchSuccess"></span><p id="suanpanMatchResult"></p><button id='suanpanMatchAgain' onclick='suanpanMatch()'>practice again</button>
+						<button onclick="suanpanMatchExit()">exit suanpan abacus match practice</button>
 					</div>
 				</div>
 			</div>
@@ -69,6 +89,7 @@
 		</div>
 	</body>
 	<script src="helpers.js"></script>
-	<script src="soroban.js"></script>
-    <script src="binary.js"></script>
+	<script src="abacus-js/suanpan.js"></script>
+	<script src="abacus-js/soroban.js"></script>
+    <script src="abacus-js/binary.js"></script>
 </html>

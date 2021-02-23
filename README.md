@@ -3,7 +3,6 @@
 -----
 
 ## feature wishlist
-- (new abacus type) suanpan abacus (算盘)
 - (game) math/subtraction arithmetic exercises
 - (code) refactoring
 

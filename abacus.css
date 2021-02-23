@@ -99,43 +99,43 @@ body {
 /* --------- abacus shared --------- */
 /* --------------------------------- */
 
-#soroban, #binary {
+#soroban, #binary, #suanpan {
 	width: 80%;
 	margin: auto;
 	margin-bottom: 20px;
 }
-#sorobanAbacus, #binaryAbacus {
+#sorobanAbacus, #binaryAbacus, #suanpanAbacus  {
     background-color: rgb(100,100,100);
     border-radius: 10px;
     padding: 1%;
 }
-#sorobanTitle, #binaryTitle {
+#sorobanTitle, #binaryTitle, #suanpanTitle {
 	margin: 30px 0 10px 0;
 	font-size: 2em;
 	padding: 0;
 }
-#sorobanAbacusValue, #binaryAbacusValue {
+#sorobanAbacusValue, #binaryAbacusValue, #suanpanAbacusValue {
 	margin: 20px 0 40px 0;
 	text-align: center;
 	font-size: 1.8em;
 }
-.sorobanDigitVal, .binaryDigitVal {
+.sorobanDigitVal, .binaryDigitVal, .suanpanDigitVal {
 	text-align: center;
-	padding: 10px 0;
 	margin: auto;
-	font-size: 2em;
+	font-size: 1.5em;
+    padding: 5px 0;
 	color: white;
 }
-.sorobanRow, .binaryRow {
+.sorobanRow, .binaryRow, .suanpanRow {
     width: 8%;
     display: inline-block;
     margin-left: 1%;
     border: 1px solid rgb(50,50,50);
 }
-.sorobanTop, .sorobanBottom, .binaryRowDisp {
+.sorobanTop, .sorobanBottom, .binaryRowDisp, .suanpanTop, .suanpanBottom {
 	width: 100%;
 }
-.sorobanRow button, .binaryRow button {
+.sorobanRow button, .binaryRow button, .suanpanRow button {
     width: 100%;
     padding: 2px;
     margin: 0;
@@ -145,15 +145,15 @@ body {
     cursor: pointer;
 }
 
-#sorobanMatchActive button, #sorobanMatchDescription button, #binaryMatchActive button, #binaryMatchDescription button {
+#sorobanMatchActive button, #sorobanMatchDescription button, #binaryMatchActive button, #binaryMatchDescription button, #suanpanMatchActive button, #suanpanMatchDescription button {
 	padding: 5px;
 	margin-left: 10px;
 }
-#sorobanMatchActive button, #binaryMatchActive button {
+#sorobanMatchActive button, #binaryMatchActive button, #suanpanMatchActive button {
 	margin: 10px 0;
 }
-#sorobanMatchDescription, #sorobanMatchActive, #binaryMatchDescription, #binaryMatchActive {
-	font-size: 1.4em;
+#sorobanMatchDescription, #sorobanMatchActive, #binaryMatchDescription, #binaryMatchActive, #suanpanMatchDescription, #suanpanMatchActive {
+	font-size: 1.1em;
 }
 
 /* --------------------------------- */
