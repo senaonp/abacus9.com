@@ -78,6 +78,7 @@ let binaryMatch = function() {
 	elemSelector("#binaryMatchNumber").style.display = "block";
 	elemSelector("#binaryMatchSuccess").innerHTML = "";
 	let rnBinary = getRandomNum(1,2**getRandomNum(1,10));
+    if (rnBinary < 8) { rnBinary = getRandomNum(1,2**getRandomNum(1,10)); }
 	checkBinaryMatch = setInterval(function() {
 		if (binaryValDisplayNum == rnBinary.toString()) {
 			elemSelector("#binaryMatchNumber").style.display = "none";
