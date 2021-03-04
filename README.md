@@ -5,8 +5,16 @@
 ## usage
 applet can be run in a web browser by checking out the repo and opening `index.html` in a web browser
 
+## features
+- 3 abacus types, each with 9 columns
+- soroban (そろばん) - 1 upper bead / 4 lower beads
+- suanpan (算盘) - 2 upper beads / 5 lower beads
+- binary abacus - 1 bead
+- practice exercise - setting the abacus to a random value
+- responsive viewport and styling to support desktop and mobile devices
+
 ## feature wishlist
-- (game) math/subtraction arithmetic exercises
+- (game) addition/subtraction arithmetic exercises
 - (code) refactoring
 
 ## Desktop preview:
