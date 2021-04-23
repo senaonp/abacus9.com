@@ -3,7 +3,7 @@
 elemSelector("#navbar").innerHTML = `
     <img src="assets/img/logo.png" />
     <ul>
-        <li onclick="confirmEvent(navi, 'this tab will redirect to the abacus9 GitHub repository; continue to (https://github.com/Tofuni/abacus9)?', 'https://github.com/Tofuni/abacus9')">GitHub Repo</li>
+        <li onclick="navi('https://github.com/Tofuni/abacus9')"><a href="https://github.com/Tofuni/abacus9">GitHub Repo</a></li>
         <li onclick="toggleBanner()">About</li>
     </ul>
     <div id="banner" style="display:none">
@@ -12,8 +12,16 @@ elemSelector("#navbar").innerHTML = `
     </div>`;
 
 elemSelector("#abacus9Description").innerHTML = `
-    abacus9 is a development side project i'm currently working on during free time; looking to build additional features over time and also welcoming feedback on the applet too (･‿･✿)
-    <br><br>
+    abacus9 is a development side project i'm currently working on during free time; also welcoming feedback on the applet too (･‿･✿)
+    <br><br><br>the current features of abacus9 are
+	<br>
+	<span class="feature">3 abacus types, each with 9 columns</span>
+	<span class="feature">soroban (そろばん) - 1 upper bead / 4 lower beads</span>
+	<span class="feature">suanpan (算盘) - 2 upper beads / 5 lower beads</span>
+	<span class="feature">binary abacus - 1 bead</span>
+	<span class="feature">practice exercise - setting the abacus to a random value</span>
+	<span class="feature">responsive viewport and styling to support desktop and mobile devices</span>
+	<br><br>
     please feel free to send feedback to <a href="mailto:tofuni.dev@gmail.com">(tofuni.dev@gmail.com)</a> and let me know if the applet has been useful or if there's any possible improvements that could be made, thanks!
     <br><br>`;
 

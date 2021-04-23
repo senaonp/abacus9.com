@@ -21,11 +21,12 @@ body {
 }
 #navbar li {
 	width: 15%;
-	height: 34px;
-	text-align: center;
+	height: 36px;
+	justify-content: center;
+	align-items: center;
 	font-size: 1em;
 	padding: 10px;
-	display: inline;
+	display: flex;
 	float: right;
 	border: 1px solid rgb(150,150,150);
 	cursor: pointer;
@@ -46,6 +47,14 @@ body {
 	max-width: 50%; 
 	padding: 3px;
 	float: left;
+}
+.feature {
+	display: block;
+	margin: 10px 0;
+	padding-left: 30px;
+	margin-left: 10px;
+	color: silver;
+	border-left: 3px solid silver;
 }
 
 /* --------------------------------- */
