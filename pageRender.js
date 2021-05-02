@@ -3,7 +3,7 @@
 elemSelector("#navbar").innerHTML = `
     <img src="assets/img/logo.png" />
     <ul>
-        <li onclick="navi('https://github.com/Tofuni/abacus9')"><a href="https://github.com/Tofuni/abacus9">GitHub Repo</a></li>
+        <li onclick="navi('https://github.com/senaonp/abacus9')"><a href="https://github.com/senaonp/abacus9">GitHub Repo</a></li>
         <li onclick="toggleBanner()">About</li>
     </ul>
     <div id="banner" style="display:none">
@@ -22,7 +22,7 @@ elemSelector("#abacus9Description").innerHTML = `
 	<span class="feature">practice exercise - setting the abacus to a random value</span>
 	<span class="feature">responsive viewport and styling to support desktop and mobile devices</span>
 	<br><br>
-    please feel free to send feedback to <a href="mailto:tofuni.dev@gmail.com">(tofuni.dev@gmail.com)</a> and let me know if the applet has been useful or if there's any possible improvements that could be made, thanks!
+    please feel free to send feedback to <a href="mailto:senaonp.dev@gmail.com">(senaonp.dev@gmail.com)</a> and let me know if the applet has been useful or if there's any possible improvements that could be made, thanks!
     <br><br>`;
 
 elemSelector("#soroban").innerHTML = `
@@ -59,11 +59,11 @@ elemSelector("#binary").innerHTML = `
     </div>`;
 
 elemSelector("#footer").innerHTML = `
-    <span>developed by Tofuni</span>
+    <span>developed by senaonp</span>
     <br><br>
-    <span>abacus9 source code is available on <a target="_blank" href="https://github.com/Tofuni/abacus9">GitHub</a> (･‿･✿)</span>
+    <span>abacus9 source code is available on <a target="_blank" href="https://github.com/senaonp/abacus9.com">GitHub</a> (･‿･✿)</span>
     <br><br>
-    <span>email: <a href="mailto:tofuni.dev@gmail.com">(tofuni.dev@gmail.com)</a></span>`;
+    <span>email: <a href="mailto:senaonp.dev@gmail.com">(senaonp.dev@gmail.com)</a></span>`;
 
 // render abacus type-specific elements
 
