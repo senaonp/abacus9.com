@@ -3,7 +3,7 @@
 elemSelector("#navbar").innerHTML = `
     <img src="assets/img/logo.png" />
     <ul>
-        <li onclick="navi('https://github.com/senaonp/abacus9')"><a href="https://github.com/senaonp/abacus9">GitHub Repo</a></li>
+        <li onclick="navi('https://github.com/senaonp/abacus9.com')"><a href="https://github.com/senaonp/abacus9.com">GitHub Repo</a></li>
         <li onclick="toggleBanner()">About</li>
     </ul>
     <div id="banner" style="display:none">
