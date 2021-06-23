@@ -12,8 +12,8 @@ elemSelector("#navbar").innerHTML = `
     </div>`;
 
 elemSelector("#abacus9Description").innerHTML = `
-    abacus9 is a development side project i'm currently working on during free time; also welcoming feedback on the applet too (･‿･✿)
-    <br><br><br>the current features of abacus9 are
+    abacus9 is a development side project i'm currently working on during free time.<br>a video demonstration of using the website is also available <a target='_blank' href='https://fbacarisas.xyz/video/#abacus9'>(here)</a>
+	<br><br>the current features of abacus9 are<hr>
 	<br>
 	<span class="feature">3 abacus types, each with 9 columns</span>
 	<span class="feature">soroban (そろばん) - 1 upper bead / 4 lower beads</span>
@@ -21,9 +21,9 @@ elemSelector("#abacus9Description").innerHTML = `
 	<span class="feature">binary abacus - 1 bead</span>
 	<span class="feature">practice exercise - setting the abacus to a random value</span>
 	<span class="feature">responsive viewport and styling to support desktop and mobile devices</span>
-	<br><br>
-    please feel free to send feedback to <a href="mailto:senaonp.dev@gmail.com">(senaonp.dev@gmail.com)</a> and let me know if the applet has been useful or if there's any possible improvements that could be made, thanks!
-    <br><br>`;
+	<br>
+	my other programming projects can also be viewed here: (<a target="_blank" href="https://fbacarisas.xyz/video/#programming_playlist">fbacarisas.xyz/video/#programming_playlist</a>)
+	<br><br>`;
 
 elemSelector("#soroban").innerHTML = `
     <p class="sorobanText" id="sorobanTitle">Soroban (そろばん)</p>

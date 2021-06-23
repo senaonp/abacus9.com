@@ -65,13 +65,13 @@ body {
 	background-color: rgba(10,10,10,0.9);
 	display: inline-block;
 	position: relative;
-	margin-bottom: 30px;
+	padding: 30px 0;
 	border-top: 4px solid rgba(100,100,100,0.5);
 	width: 100%;
 }
 #banner p {
-	margin-left: 70px;
-	color: white;
+	margin: 15px 50px;
+	color: rgb(250,250,250);
 }
 #banner button {
 	position: absolute;
@@ -83,6 +83,7 @@ body {
 }
 #banner a {
 	color: springgreen;
+	text-decoration: underline;
 }
 
 /* --------------------------------- */
