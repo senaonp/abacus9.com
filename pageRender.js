@@ -63,7 +63,7 @@ elemSelector("#footer").innerHTML = `
     <br><br>
     <span>abacus9 source code is available on <a target="_blank" href="https://github.com/senaonp/abacus9.com">GitHub</a> (･‿･✿)</span>
     <br><br>
-    <span>email: <a href="mailto:senaonp.dev@gmail.com">(senaonp.dev@gmail.com)</a></span>`;
+    <span>email: <a href="mailto:dev@greentea.moe">(dev@greentea.moe)</a></span>`;
 
 // render abacus type-specific elements
 
