@@ -42,3 +42,12 @@ var toggleElem = function(elem) {
 	}
 	elem.style.display = "none";
 }
+
+// scroll if sharable hash
+var adjustWindow = function() {
+	var sharables = ["#soroban", "#suanpan", "#binary"];
+	if (sharables.includes(location.hash)) {
+		location.href = window.location.href;
+		window.scrollBy(0, -70);
+	}
+}
