@@ -11,6 +11,13 @@ elemSelector("#navbar").innerHTML = `
         <button onclick="hideElem(elemSelector('#banner'))">close</button>
     </div>`;
 
+elemSelector("#languages").innerHTML = `
+    <div id="langElem">
+        <a class="lang" href="./">en</a> | 
+        <a class="lang" href="./zh/">中文</a> | 
+        <a class="lang" href="./jp/">日本語</a>
+    </div>`;
+
 elemSelector("#abacus9Description").innerHTML = `
     abacus9 is a development side project i'm currently working on during free time.<br>a video demonstration of using the website is also available <a target='_blank' href='https://fbacarisas.xyz/video/#abacus9'>(here)</a>
 	<br><br>the current features of abacus9 are<hr>
@@ -27,6 +34,7 @@ elemSelector("#abacus9Description").innerHTML = `
 
 elemSelector("#soroban").innerHTML = `
     <p class="sorobanText" id="sorobanTitle">Soroban (そろばん)</p>
+	<small class="sharable">sharable link: <a target="_blank" href='https://abacus9.com/#soroban'>https://abacus9.com/#soroban</a></small><br />
     <p class="sorobanText">you can use the up/down (&#9661/&#9651) buttons on the abacus rows to modify the abacus values</p>
     <p class="sorobanText" id="sorobanDescription">background - each row in the abacus represents a digit; the top bead has a value of 5 while each of the bottom beads has a value of 1. a number is counted when beads are positioned towards the middle beam <span class="eventText" onclick="hideElem(elemSelector('#sorobanDescription'))">(hide description)</span></p>
     <div id="sorobanAbacus"></div>
@@ -38,7 +46,8 @@ elemSelector("#soroban").innerHTML = `
 
 elemSelector("#suanpan").innerHTML = `
     <p class="suanpanText" id="suanpanTitle">Suanpan (算盘)</p>
-    <p class="suanpanText">you can use the up/down (&#9661/&#9651) buttons on the abacus rows to modify the abacus values</p>
+    <small class="sharable">sharable link: <a target="_blank" href='https://abacus9.com/#suanpan'>https://abacus9.com/#suanpan</a></small><br />
+	<p class="suanpanText">you can use the up/down (&#9661/&#9651) buttons on the abacus rows to modify the abacus values</p>
     <p class="suanpanText" id="suanpanDescription">background - each row in the abacus represents a digit; each of the top beads has a value of 5 while each of the bottom beads has a value of 1. a number is counted when beads are positioned towards the middle beam <span class="eventText" onclick="hideElem(elemSelector('#suanpanDescription'))">(hide description)</span></p>
     <div id="suanpanAbacus"></div>
     <div id="suanpanAbacusValue"></div>
@@ -49,6 +58,7 @@ elemSelector("#suanpan").innerHTML = `
 
 elemSelector("#binary").innerHTML = `
     <p class="binaryText" id="binaryTitle">Binary abacus</p>
+	<small target="_blank" class="sharable">sharable link: <a target="_blank" href='https://abacus9.com/#binary'>https://abacus9.com/#binary</a></small><br />
     <p class="binaryText">you can use the up/down (&#9661/&#9651) buttons on the abacus rows to modify the abacus values</p>
     <p class="binaryText" id="binaryDescription">background - each row in the abacus represents a binary digit; a bead on the top represents the value of 1 while a bead on the bottom represents a value of 0 <span class="eventText" onclick="hideElem(elemSelector('#binaryDescription'))">(hide description)</span></p>
     <div id="binaryAbacus"></div>
