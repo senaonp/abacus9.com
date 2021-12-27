@@ -121,7 +121,7 @@ body {
 
 #soroban, #binary, #suanpan {
 	width: 80%;
-	margin: 20px auto;
+	margin: 0px auto 20px auto;
 }
 #sorobanAbacus, #binaryAbacus, #suanpanAbacus  {
     background-color: rgb(100,100,100);

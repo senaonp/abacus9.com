@@ -37,7 +37,7 @@ elemSelector("#suanpan").innerHTML = `
     <small class="sharable">分享的网页: <a target="_blank" href='https://abacus9.com/zh/#suanpan'>https://abacus9.com/zh/#suanpan</a></small><br />
     <p class="suanpanText">你能使用[上/下] (&#9661/&#9651) 按钮设置算盤的值</p>
     <p class="suanpanText" id="suanpanDescription">细节 - 每个行是一位数；顶珠有价值的5。底珠有价值的1。如果珠被放置向中间的横梁，它被计算
-    <span class="eventText" onclick="hideElem(elemSelector('#suanpanDescription'))">(hide description)</span></p>
+    <span class="eventText" onclick="hideElem(elemSelector('#suanpanDescription'))">(隐藏描述)</span></p>
     <div id="suanpanAbacus"></div>
     <div id="suanpanAbacusValue"></div>
     <div id="suanpanMatch">
@@ -49,7 +49,7 @@ elemSelector("#soroban").innerHTML = `
     <p class="sorobanText" id="sorobanTitle">日式算盤</p>
     <small class="sharable">分享的网页: <a target="_blank" href='https://abacus9.com/zh/#soroban'>https://abacus9.com/zh/#soroban</a></small><br />
     <p class="sorobanText">你能使用[上/下] (&#9661/&#9651) 按钮设置算盤的值</p>
-    <p class="sorobanText" id="sorobanDescription">细节 - 每个行是一位数；顶珠有价值的5。底珠有价值的1。如果珠被放置向中间的横梁，它被计算<span class="eventText" onclick="hideElem(elemSelector('#sorobanDescription'))">(hide description)</span></p>
+    <p class="sorobanText" id="sorobanDescription">细节 - 每个行是一位数；顶珠有价值的5。底珠有价值的1。如果珠被放置向中间的横梁，它被计算<span class="eventText" onclick="hideElem(elemSelector('#sorobanDescription'))">(隐藏描述)</span></p>
     <div id="sorobanAbacus"></div>
     <div id="sorobanAbacusValue"></div>
     <div id="sorobanMatch">
@@ -61,7 +61,7 @@ elemSelector("#binary").innerHTML = `
     <p class="binaryText" id="binaryTitle">二进制算盤</p>
     <small class="sharable">分享的网页: <a target="_blank" href='https://abacus9.com/zh/#binary'>https://abacus9.com/zh/#binary</a></small><br />
     <p class="binaryText">你能使用[上/下] (&#9661/&#9651) 按钮设置算盤的值</p>
-    <p class="binaryText" id="binaryDescription">细节 - 每个行是一二进制位数；珠设置向上有价值的1。珠设置向下有价值的0。<span class="eventText" onclick="hideElem(elemSelector('#binaryDescription'))">(hide description)</span></p>
+    <p class="binaryText" id="binaryDescription">细节 - 每个行是一二进制位数；珠设置向上有价值的1。珠设置向下有价值的0。<span class="eventText" onclick="hideElem(elemSelector('#binaryDescription'))">(隐藏描述)</span></p>
     <div id="binaryAbacus"></div>
     <div id="binaryAbacusValue"></div>
     <div id="binaryMatch">
