@@ -125,7 +125,7 @@ let suanpanMatch = function() {
 			clearInterval(checksuanpanMatch);
 		}
 	}, 100)
-	elemSelector("#suanpanMatchNumber").innerHTML = "算盘练习 - 置算盘的值为 " + rn.toString();
+	elemSelector("#suanpanMatchNumber").innerHTML = "练习 - 匹配算盤的值 【" + rn.toString() + "】";
 };
 
 let suanpanMatchExit = function() {
