@@ -31,7 +31,7 @@ let binarySubt = function(id, val) {
 }
 
 let displaybinaryValue = function() {
-	binaryValDisplay = "2進数そろばん値： ";
+	binaryValDisplay = "2進数そろばんの値： ";
 	binaryValDisplayNum = 0;
     for (let a=0; a<9; a+=1) {
 		binaryValDisplayNum += binaryVals[a]*(2**(8-a));
@@ -50,7 +50,7 @@ for (let binaryDigit=0; binaryDigit<binaryDigits; binaryDigit+=1) {
     binary += binaryRow;
     elemSelector("#binaryAbacus").innerHTML += binaryRow;
 	elemSelector("#bb_"+binaryDigit.toString()).src = "assets/img/binary/bb_0.jpg";
-	elemSelector("#binaryAbacusValue").innerHTML = "2進数そろばん値： 0";
+	elemSelector("#binaryAbacusValue").innerHTML = "2進数そろばんの値： 0";
 }
 
 // match numbers practice
@@ -65,7 +65,7 @@ let initializeBinary = function() {
 	binary = "";
 	for (let digit=0; digit<digits; digit+=1) {
 		elemSelector("#bb_"+digit.toString()).src = "assets/img/binary/bb_0.jpg";
-		elemSelector("#binaryAbacusValue").innerHTML = "2進数そろばん値： 0";
+		elemSelector("#binaryAbacusValue").innerHTML = "2進数そろばんの値： 0";
 		elemSelector("#binaryDigitVal_"+digit.toString()).innerHTML = "0";
 	}
 }
