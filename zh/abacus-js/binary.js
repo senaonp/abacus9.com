@@ -89,7 +89,7 @@ let binaryMatch = function() {
 			clearInterval(checkBinaryMatch);
 		}
 	}, 100)
-	elemSelector("#binaryMatchNumber").innerHTML = "练习 - 匹配算盤的值 【" + rnBinary.toString() + "】";
+	elemSelector("#binaryMatchNumber").innerHTML = "练习 - 匹配算盤的值 》【" + rnBinary.toString() + "】";
 };
 
 let binaryMatchExit = function() {

@@ -110,7 +110,7 @@ let sorobanMatch = function() {
 			clearInterval(checkSorobanMatch);
 		}
 	}, 100)
-	elemSelector("#sorobanMatchNumber").innerHTML = "练习 - 匹配算盤的值 【" + rn.toString() + "】";
+	elemSelector("#sorobanMatchNumber").innerHTML = "练习 - 匹配算盤的值 》【" + rn.toString() + "】";
 };
 
 let sorobanMatchExit = function() {
