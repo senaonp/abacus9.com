@@ -31,7 +31,7 @@ let binarySubt = function(id, val) {
 }
 
 let displaybinaryValue = function() {
-	binaryValDisplay = "binary abacus value: ";
+	binaryValDisplay = "2進数そろばん値： ";
 	binaryValDisplayNum = 0;
     for (let a=0; a<9; a+=1) {
 		binaryValDisplayNum += binaryVals[a]*(2**(8-a));
@@ -50,7 +50,7 @@ for (let binaryDigit=0; binaryDigit<binaryDigits; binaryDigit+=1) {
     binary += binaryRow;
     elemSelector("#binaryAbacus").innerHTML += binaryRow;
 	elemSelector("#bb_"+binaryDigit.toString()).src = "assets/img/binary/bb_0.jpg";
-	elemSelector("#binaryAbacusValue").innerHTML = "binary abacus value: 0";
+	elemSelector("#binaryAbacusValue").innerHTML = "2進数そろばん値： 0";
 }
 
 // match numbers practice
@@ -65,7 +65,7 @@ let initializeBinary = function() {
 	binary = "";
 	for (let digit=0; digit<digits; digit+=1) {
 		elemSelector("#bb_"+digit.toString()).src = "assets/img/binary/bb_0.jpg";
-		elemSelector("#binaryAbacusValue").innerHTML = "binary abacus value: 0";
+		elemSelector("#binaryAbacusValue").innerHTML = "2進数そろばん値： 0";
 		elemSelector("#binaryDigitVal_"+digit.toString()).innerHTML = "0";
 	}
 }
@@ -84,12 +84,12 @@ let binaryMatch = function() {
 			elemSelector("#binaryMatchNumber").style.display = "none";
 			elemSelector("#binaryMatchAgain").style.display = "block";
 			binaryMatches += 1;
-			elemSelector("#binaryMatchSuccess").innerHTML = "nice!";
-			elemSelector("#binaryMatchResult").innerHTML = "number of matches: " + binaryMatches;
+			elemSelector("#binaryMatchSuccess").innerHTML = "良い！";
+			elemSelector("#binaryMatchResult").innerHTML = "一致数： " + binaryMatches;
 			clearInterval(checkBinaryMatch);
 		}
 	}, 100)
-	elemSelector("#binaryMatchNumber").innerHTML = "abacus practice - set the abacus to " + rnBinary.toString();
+	elemSelector("#binaryMatchNumber").innerHTML = "練習：値を一致します ＞ 「" + rnBinary.toString() + "」";
 };
 
 let binaryMatchExit = function() {

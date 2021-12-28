@@ -42,7 +42,7 @@ let suanpanSubt = function(id, val, p) {
 }
 
 let displaysuanpanValue = function() {
-	suanpanValDisplay = "suanpan abacus value: ";
+	suanpanValDisplay = "中国算盤の値： ";
 	suanpanValDisplayNum = "";
     let carryOver = false;
     for (let v=9; v>-1; v-=1) {
@@ -85,7 +85,7 @@ for (let suanpanDigit=0; suanpanDigit<suanpanDigits; suanpanDigit+=1) {
     elemSelector("#suanpanAbacus").innerHTML += suanpanRow;
 	elemSelector("#spt_"+suanpanDigit.toString()).src = "assets/img/suanpan/spt_0.jpg";
 	elemSelector("#spb_"+suanpanDigit.toString()).src = "assets/img/suanpan/spb_0.jpg";
-	elemSelector("#suanpanAbacusValue").innerHTML = "suanpan abacus value: 0";
+	elemSelector("#suanpanAbacusValue").innerHTML = "中国算盤の値： 0";
 }
 
 // match numbers practice
@@ -102,7 +102,7 @@ let initializesuanpan = function() {
 	for (let suanpanDigit=0; suanpanDigit<suanpanDigits; suanpanDigit+=1) {
 		elemSelector("#spt_"+suanpanDigit.toString()).src = "assets/img/suanpan/spt_0.jpg";
 		elemSelector("#spb_"+suanpanDigit.toString()).src = "assets/img/suanpan/spb_0.jpg";
-		elemSelector("#suanpanAbacusValue").innerHTML = "suanpan abacus value: 0";
+		elemSelector("#suanpanAbacusValue").innerHTML = "中国算盤の値： 0";
 		elemSelector("#suanpanDigitVal_"+suanpanDigit.toString()).innerHTML = "0";
 	}
 }
@@ -120,12 +120,12 @@ let suanpanMatch = function() {
 			elemSelector("#suanpanMatchNumber").style.display = "none";
 			elemSelector("#suanpanMatchAgain").style.display = "block";
 			suanpanMatches += 1;
-			elemSelector("#suanpanMatchSuccess").innerHTML = "nice!";
-			elemSelector("#suanpanMatchResult").innerHTML = "number of matches: " + suanpanMatches;
+			elemSelector("#suanpanMatchSuccess").innerHTML = "良い！";
+			elemSelector("#suanpanMatchResult").innerHTML = "一致数： " + suanpanMatches;
 			clearInterval(checksuanpanMatch);
 		}
 	}, 100)
-	elemSelector("#suanpanMatchNumber").innerHTML = "abacus practice - set the abacus to " + rn.toString();
+	elemSelector("#suanpanMatchNumber").innerHTML = "練習：値を一致します ＞ 「" + rn.toString() + "」";
 };
 
 let suanpanMatchExit = function() {

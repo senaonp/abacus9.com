@@ -40,7 +40,7 @@ let sorobanSubt = function(id, val, p) {
 }
 
 let displaySorobanValue = function() {
-	sorobanValDisplay = "soroban abacus value: ";
+	sorobanValDisplay = "そろばんの値： ";
 	sorobanValDisplayNum = "";
 	let x = 0;
 	sorobanVals.forEach(function(v) { 
@@ -58,9 +58,7 @@ for (let digit=0; digit<digits; digit+=1) {
         <button onclick="sorobanSubt('sbt_`+digit.toString()+`', 5, 't')">&#9651</button>
         <img draggable="false" class="sorobanTop" id="sbt_`+digit.toString()+`" />
         <button onclick="sorobanAdd('sbt_`+digit.toString()+`', 5, 't')">&#9661</button>
-        
         <div class="vPadding"></div>
-        
         <button onclick="sorobanAdd('sbb_`+digit.toString()+`', 1, 'b')">&#9651</button>
         <img draggable="false" class="sorobanBottom" id="sbb_`+digit.toString()+`" />
         <button onclick="sorobanSubt('sbb_`+digit.toString()+`', 1, 'b')">&#9661</button>
@@ -70,7 +68,7 @@ for (let digit=0; digit<digits; digit+=1) {
     elemSelector("#sorobanAbacus").innerHTML += sorobanRow;
 	elemSelector("#sbt_"+digit.toString()).src = "assets/img/soroban/sbv_00.jpg";
 	elemSelector("#sbb_"+digit.toString()).src = "assets/img/soroban/sbv_0.jpg";
-	elemSelector("#sorobanAbacusValue").innerHTML = "soroban abacus value: 0";
+	elemSelector("#sorobanAbacusValue").innerHTML = "そろばんの値： 0";
 }
 
 // match numbers practice
@@ -87,7 +85,7 @@ let initializeSoroban = function() {
 	for (let digit=0; digit<digits; digit+=1) {
 		elemSelector("#sbt_"+digit.toString()).src = "assets/img/soroban/sbv_00.jpg";
 		elemSelector("#sbb_"+digit.toString()).src = "assets/img/soroban/sbv_0.jpg";
-		elemSelector("#sorobanAbacusValue").innerHTML = "soroban abacus value: 0";
+		elemSelector("#sorobanAbacusValue").innerHTML = "そろばんの値： 0";
 		elemSelector("#sorobanDigitVal_"+digit.toString()).innerHTML = "0";
 	}
 }
@@ -105,12 +103,12 @@ let sorobanMatch = function() {
 			elemSelector("#sorobanMatchNumber").style.display = "none";
 			elemSelector("#sorobanMatchAgain").style.display = "block";
 			sorobanMatches += 1;
-			elemSelector("#sorobanMatchSuccess").innerHTML = "nice!";
-			elemSelector("#sorobanMatchResult").innerHTML = "number of matches: " + sorobanMatches;
+			elemSelector("#sorobanMatchSuccess").innerHTML = "良い！";
+			elemSelector("#sorobanMatchResult").innerHTML = "一致数： " + sorobanMatches;
 			clearInterval(checkSorobanMatch);
 		}
 	}, 100)
-	elemSelector("#sorobanMatchNumber").innerHTML = "abacus practice - set the abacus to " + rn.toString();
+	elemSelector("#sorobanMatchNumber").innerHTML = "練習：値を一致します ＞ 「" + rn.toString() + "」";
 };
 
 let sorobanMatchExit = function() {
