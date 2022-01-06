@@ -19,8 +19,10 @@ applet can be run in a web browser by checking out the repo and opening `index.h
 - binary abacus - 1 bead
 - practice exercise - setting the abacus to a random value
 - responsive viewport and styling to support desktop and mobile devices
-- Chinese language version - [https://abacus9.com/zh/]
-- Japanese language version - [https://abacus9.com/jp/]
+- abacus9 language versions
+  - English - [https://abacus9.com]
+  - Chinese - [https://abacus9.com/zh/]
+  - Japanese - [https://abacus9.com/jp/]
 
 ## feature wishlist
 - (game) addition/subtraction arithmetic exercises
