@@ -21,7 +21,7 @@ let sorobanAdd = function(id, val, p) {
 	if ((p=='b'&&sorobanValState>4) || (p=='t'&&sorobanValState>9) || (sorobanVal > 9)) { return; }
 	sorobanValStates[digit][p] += val;
 	sorobanVals[digit] += val;
-	elemSelector("#"+id).src = "assets/img/soroban/sbv_"+sorobanValState+".jpg";
+	elemSelector("#"+id).src = "../assets/img/soroban/sbv_"+sorobanValState+".jpg";
 	elemSelector("#sorobanDigitVal_"+digit).innerText = sorobanVals[digit];
 	displaySorobanValue();
 }
@@ -33,8 +33,8 @@ let sorobanSubt = function(id, val, p) {
 	if ((p=='b'&&sorobanValState<0) || (p=='t'&&sorobanValState<0) || (sorobanVal < 0)) { return; }
 	sorobanValStates[digit][p] -= val;
 	sorobanVals[digit] -= val;
-	if (sorobanValStates[digit][p] == 0 && p=="t") { elemSelector("#"+id).src = "assets/img/soroban/sbv_00.jpg" } 
-	else { elemSelector("#"+id).src = "assets/img/soroban/sbv_"+sorobanValState+".jpg"; }
+	if (sorobanValStates[digit][p] == 0 && p=="t") { elemSelector("#"+id).src = "../assets/img/soroban/sbv_00.jpg" } 
+	else { elemSelector("#"+id).src = "../assets/img/soroban/sbv_"+sorobanValState+".jpg"; }
 	elemSelector("#sorobanDigitVal_"+digit).innerText = sorobanVals[digit];
 	displaySorobanValue();
 }
@@ -68,8 +68,8 @@ for (let digit=0; digit<digits; digit+=1) {
     </div>`
     soroban += sorobanRow;
     elemSelector("#sorobanAbacus").innerHTML += sorobanRow;
-	elemSelector("#sbt_"+digit.toString()).src = "assets/img/soroban/sbv_00.jpg";
-	elemSelector("#sbb_"+digit.toString()).src = "assets/img/soroban/sbv_0.jpg";
+	elemSelector("#sbt_"+digit.toString()).src = "../assets/img/soroban/sbv_00.jpg";
+	elemSelector("#sbb_"+digit.toString()).src = "../assets/img/soroban/sbv_0.jpg";
 	elemSelector("#sorobanAbacusValue").innerHTML = "日式算盤的值： 0";
 }
 
@@ -85,8 +85,8 @@ let initializeSoroban = function() {
 	sorobanValDisplayNum = "";
 	soroban = "";
 	for (let digit=0; digit<digits; digit+=1) {
-		elemSelector("#sbt_"+digit.toString()).src = "assets/img/soroban/sbv_00.jpg";
-		elemSelector("#sbb_"+digit.toString()).src = "assets/img/soroban/sbv_0.jpg";
+		elemSelector("#sbt_"+digit.toString()).src = "../assets/img/soroban/sbv_00.jpg";
+		elemSelector("#sbb_"+digit.toString()).src = "../assets/img/soroban/sbv_0.jpg";
 		elemSelector("#sorobanAbacusValue").innerHTML = "日式算盤的值： 0";
 		elemSelector("#sorobanDigitVal_"+digit.toString()).innerHTML = "0";
 	}

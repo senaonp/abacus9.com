@@ -15,7 +15,7 @@ let binaryAdd = function(id, val) {
 	binaryVal = binaryVals[binaryDigit] + val;
 	if (binaryVal > 1) { return; }
 	binaryVals[binaryDigit] += val;
-	elemSelector("#"+id).src = "assets/img/binary/bb_"+binaryVal+".jpg";
+	elemSelector("#"+id).src = "../assets/img/binary/bb_"+binaryVal+".jpg";
 	elemSelector("#binaryDigitVal_"+binaryDigit).innerText = binaryVals[binaryDigit];
 	displaybinaryValue();
 }
@@ -25,7 +25,7 @@ let binarySubt = function(id, val) {
 	binaryVal = binaryVals[binaryDigit]-val;
 	if (binaryVal < 0) { return; }
 	binaryVals[binaryDigit] -= val;
-	elemSelector("#"+id).src = "assets/img/binary/bb_"+binaryVal+".jpg";
+	elemSelector("#"+id).src = "../assets/img/binary/bb_"+binaryVal+".jpg";
 	elemSelector("#binaryDigitVal_"+binaryDigit).innerText = binaryVals[binaryDigit];
 	displaybinaryValue();
 }
@@ -49,7 +49,7 @@ for (let binaryDigit=0; binaryDigit<binaryDigits; binaryDigit+=1) {
     </div>`;
     binary += binaryRow;
     elemSelector("#binaryAbacus").innerHTML += binaryRow;
-	elemSelector("#bb_"+binaryDigit.toString()).src = "assets/img/binary/bb_0.jpg";
+	elemSelector("#bb_"+binaryDigit.toString()).src = "../assets/img/binary/bb_0.jpg";
 	elemSelector("#binaryAbacusValue").innerHTML = "二进制算盘的值： 0";
 }
 
@@ -64,7 +64,7 @@ let initializeBinary = function() {
 	binaryValDisplayNum = "";
 	binary = "";
 	for (let digit=0; digit<digits; digit+=1) {
-		elemSelector("#bb_"+digit.toString()).src = "assets/img/binary/bb_0.jpg";
+		elemSelector("#bb_"+digit.toString()).src = "../assets/img/binary/bb_0.jpg";
 		elemSelector("#binaryAbacusValue").innerHTML = "二进制算盘的值： 0";
 		elemSelector("#binaryDigitVal_"+digit.toString()).innerHTML = "0";
 	}

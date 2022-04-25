@@ -1,7 +1,7 @@
 // render website elements
 
 elemSelector("#navbar").innerHTML = `
-    <img src="assets/img/logo.png" />
+    <img src="../assets/img/logo.png" />
     <ul>
         <li onclick="navi('https://github.com/senaonp/abacus9.com')"><a href="https://github.com/senaonp/abacus9.com">Githubレポジトリ</a></li>
         <li onclick="toggleBanner()">「abacus9」について</li>

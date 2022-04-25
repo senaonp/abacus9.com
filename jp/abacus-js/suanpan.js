@@ -22,8 +22,8 @@ let suanpanAdd = function(id, val, p) {
 	if ((p=='b'&&suanpanValState>5) || (p=='t'&&suanpanValState>10) || (suanpanVal > 15)) { return; }
 	suanpanValStates[suanpanDigit][p] += val;
 	suanpanVals[suanpanDigit] += val;
-	if (p=='b') { elemSelector("#"+id).src = "assets/img/suanpan/spb_"+suanpanValState+".jpg" }
-    else { elemSelector("#"+id).src = "assets/img/suanpan/spt_"+suanpanValState+".jpg" }
+	if (p=='b') { elemSelector("#"+id).src = "../assets/img/suanpan/spb_"+suanpanValState+".jpg" }
+    else { elemSelector("#"+id).src = "../assets/img/suanpan/spt_"+suanpanValState+".jpg" }
 	elemSelector("#suanpanDigitVal_"+suanpanDigit).innerText = suanpanVals[suanpanDigit];
 	displaysuanpanValue();
 }
@@ -35,8 +35,8 @@ let suanpanSubt = function(id, val, p) {
 	if ((p=='b'&&suanpanValState<0) || (p=='t'&&suanpanValState<0) || (suanpanVal < 0)) { return; }
 	suanpanValStates[suanpanDigit][p] -= val;
 	suanpanVals[suanpanDigit] -= val;
-	if (p=="b") { elemSelector("#"+id).src = "assets/img/suanpan/spb_"+suanpanValState+".jpg" }
-	else { elemSelector("#"+id).src = "assets/img/suanpan/spt_"+suanpanValState+".jpg"; }
+	if (p=="b") { elemSelector("#"+id).src = "../assets/img/suanpan/spb_"+suanpanValState+".jpg" }
+	else { elemSelector("#"+id).src = "../assets/img/suanpan/spt_"+suanpanValState+".jpg"; }
 	elemSelector("#suanpanDigitVal_"+suanpanDigit).innerText = suanpanVals[suanpanDigit];
 	displaysuanpanValue();
 }
@@ -63,7 +63,7 @@ let displaysuanpanValue = function() {
         x = 1;
         suanpanValDisplayNum += v.toString();
     });
-    if (suanpanValsDisplay.join("") == "") { suanpanValDisplayNum = "0"; }
+    if (suanpanValsDisplay.join("") === "0".repeat(suanpanValsDisplay.length)) { suanpanValDisplayNum = "0"; }
 	elemSelector("#suanpanAbacusValue").innerHTML = suanpanValDisplay + suanpanValDisplayNum;
 }
 
@@ -83,8 +83,8 @@ for (let suanpanDigit=0; suanpanDigit<suanpanDigits; suanpanDigit+=1) {
     </div>`
     suanpan += suanpanRow;
     elemSelector("#suanpanAbacus").innerHTML += suanpanRow;
-	elemSelector("#spt_"+suanpanDigit.toString()).src = "assets/img/suanpan/spt_0.jpg";
-	elemSelector("#spb_"+suanpanDigit.toString()).src = "assets/img/suanpan/spb_0.jpg";
+	elemSelector("#spt_"+suanpanDigit.toString()).src = "../assets/img/suanpan/spt_0.jpg";
+	elemSelector("#spb_"+suanpanDigit.toString()).src = "../assets/img/suanpan/spb_0.jpg";
 	elemSelector("#suanpanAbacusValue").innerHTML = "中国算盤の値： 0";
 }
 
@@ -100,8 +100,8 @@ let initializesuanpan = function() {
 	suanpanValDisplayNum = "";
 	suanpan = "";
 	for (let suanpanDigit=0; suanpanDigit<suanpanDigits; suanpanDigit+=1) {
-		elemSelector("#spt_"+suanpanDigit.toString()).src = "assets/img/suanpan/spt_0.jpg";
-		elemSelector("#spb_"+suanpanDigit.toString()).src = "assets/img/suanpan/spb_0.jpg";
+		elemSelector("#spt_"+suanpanDigit.toString()).src = "../assets/img/suanpan/spt_0.jpg";
+		elemSelector("#spb_"+suanpanDigit.toString()).src = "../assets/img/suanpan/spb_0.jpg";
 		elemSelector("#suanpanAbacusValue").innerHTML = "中国算盤の値： 0";
 		elemSelector("#suanpanDigitVal_"+suanpanDigit.toString()).innerHTML = "0";
 	}

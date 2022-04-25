@@ -63,7 +63,7 @@ let displaysuanpanValue = function() {
         x = 1;
         suanpanValDisplayNum += v.toString();
     });
-    if (suanpanValsDisplay.join("") == "") { suanpanValDisplayNum = "0"; }
+    if (suanpanValsDisplay.join("") === "0".repeat(suanpanValsDisplay.length)) { suanpanValDisplayNum = "0"; }
 	elemSelector("#suanpanAbacusValue").innerHTML = suanpanValDisplay + suanpanValDisplayNum;
 }
 
