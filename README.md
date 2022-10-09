@@ -7,6 +7,15 @@
 ## usage
 applet can be run in a web browser by checking out the repo and opening `index.html` in a web browser
 
+### running abacus9 on NGINX web server with Docker
+```
+docker build --tag abacus9:dev .
+docker run -p 8001:80 -d --name abacus9 abacus9:dev
+# with this config, abacus9 runs on localhost:8001
+```
+
+-----
+
 ## shareable abacus links
 - soroban (そろばん) - https://abacus9.com/#soroban
 - suanpan (算盘) - https://abacus9.com/#suanpan
